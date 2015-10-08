@@ -25,29 +25,40 @@ public class GeometricObject {
 		this(width, height, new Vertex(0,0));
 	}
 	
+	public GeometricObject(){
+		this(10); 
+	}
+	
 	public GeometricObject(double width){
-		this(width,width);}
+		this(width,width);
+	}
 	
 	public GeometricObject(Vertex pos){
-		this(0,0,pos);}
+		this(0,0,pos);
+	}
 	
     public double getWidth(){
-    	return width;}
+    	return width;
+    }
 	
     public double getHeight(){
-    	return height;}
+    	return height;
+    }
     
     public Vertex getPos(){
-    	return pos;}
+    	return pos;
+    }
 	
     public String toString(){
     	return "width="+width+", height="+height+", pos="+pos;
     }
     public double circumference(){
-    	return 2*(width+height);} 
+    	return 2*(width+height);
+    } 
         
     public double area(){
-    	return width*height;}
+    	return width*height;
+    }
     
     public boolean contains(Vertex v){
     	return v.x >=pos.x && v.x <=pos.x+width // ist x drin?
@@ -59,7 +70,8 @@ public class GeometricObject {
     }
     
     public void moveTo(Vertex pos){
-    	this.pos=pos;}
+    	this.pos=pos;
+    }
     
     public void moveTo(double x, double y){
     	moveTo(new Vertex(x,y));
